@@ -264,15 +264,15 @@ namespace Filtrea
                             break;
 
                         case "Tension Spring":
-                            record[0] += " - " + txtTsQty.Text + "TS" + hardwarePos(cbTsSs, cbPtLs); 
+                            record[0] += " - " + txtTsQty.Text + " TS" + hardwarePos(cbTsSs, cbPtLs); 
                             break;
 
                         case "Mounting Bracket":
-                            record[0] += " - " + txtMbQty.Text + "MB" + hardwarePos(cbMbSs, cbMbLs);
+                            record[0] += " - " + txtMbQty.Text + " MB" + hardwarePos(cbMbSs, cbMbLs);
                             break;
 
                         case "Grommet":
-                            record[0] += " - " + txtGromQty.Text + "Grommet" + hardwarePos(cbGromSs, cbGromLs);
+                            record[0] += " - " + txtGromQty.Text + " Grommet" + hardwarePos(cbGromSs, cbGromLs);
                             break;
                     }
                 }
@@ -280,7 +280,7 @@ namespace Filtrea
         }
 
         //REFACTOR ME! Could create a child class that inherits from Panel... 
-        //For hiding fields for hardware that isn't used
+        //hiding fields for hardware that isn't used
         private void clearHardware (ref Panel pan, ref TextBox qty, ref RadioButton pos1, 
             ref RadioButton pos2, ref CheckBox side1, ref CheckBox side2) {
 
@@ -381,7 +381,7 @@ namespace Filtrea
             return total;
             }
 
-        /*EVENT CODE*/ 
+        /*FORM EVENT CODE*/ 
         
         //adding product's specs, qty, and price to current order
         private void btnAdd2Order_Click(object sender, EventArgs e)
@@ -404,46 +404,14 @@ namespace Filtrea
             }
         }
 
-        //Clears fields for entry of an additional product
-        private void btnClearFields_Click(object sender, EventArgs e)
-        {
-            clearFields();
-        }
-
-        //Deletes the selected entry from the current order
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < lvCurOrder.Items.Count; i++)
-            {
-                if (lvCurOrder.Items[i].Selected)
-                {
-                    lvCurOrder.Items[i].Remove();
-                    i--;
-                }
-            }
-        }
-
-        /*Prints material prep instructions, fab diagram, package label, 
-        shipping label, invoice, enters transaction into ledger*/
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //clears form for an order by a new client
-        private void btnNewOrder_Click(object sender, EventArgs e)
-        {
-            lvCurOrder.Items.Clear();
-            clearFields();
-            cboxCustomer.Text = null;
-        }
-
+        //TODO: Add functionality to the pop-up interface
         //editing an entry
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int selectCount = 0;
+            int currentItems = lvCurOrder.Items.Count;
 
-            for (int i = 0; i < lvCurOrder.Items.Count; i++)
+            for (int i = 0; i < currentItems ; i++)
             {
                 if (lvCurOrder.Items[i].Selected)
                 {
@@ -469,8 +437,43 @@ namespace Filtrea
                     break;
             }
         }
+
+        //clears fields for entry of an additional product
+        private void btnClearFields_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+
+        //removes selected entries from current order
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvCurOrder.Items.Count; i++)
+            {
+                if (lvCurOrder.Items[i].Selected)
+                {
+                    lvCurOrder.Items[i].Remove();
+                    i--;
+                }
+            }
+        }
+
+
+        /* should print material prep instructions, fab diagram, package label, 
+        shipping label, invoice, enters transaction into ledger*/
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //clears form for an order by a new client
+        private void btnNewOrder_Click(object sender, EventArgs e)
+        {
+            lvCurOrder.Items.Clear();
+            clearFields();
+            cboxCustomer.Text = null;
+        }
         
-        //Show/Hide PT fields
+        //show or hide component fields - refactor this shit
         private void cbPT_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPT.Checked)
@@ -485,7 +488,6 @@ namespace Filtrea
             }
         }
 
-        //Show/Hide TS fields
         private void cbTS_CheckedChanged(object sender, EventArgs e)
         {
             if (cbTS.Checked)
@@ -500,7 +502,6 @@ namespace Filtrea
             }
         }
 
-        //Show/Hide Mb fields
         private void cbMB_CheckedChanged(object sender, EventArgs e)
         {
             if (cbMB.Checked)
@@ -515,7 +516,6 @@ namespace Filtrea
             }
         }
 
-        //Show/Hide Grom fields
         private void cbGrom_CheckedChanged(object sender, EventArgs e)
         {
             if(cbGrom.Checked)
@@ -530,7 +530,8 @@ namespace Filtrea
             }
         }
 
-        //Exiting from the "File" Menu Item
+        /* MENU EVENTS */
+        //exiting from the "File" menu item
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
