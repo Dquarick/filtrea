@@ -408,20 +408,20 @@ namespace Filtrea
         //editing an entry
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int selectCount = 0;
+            int selectedCount = 0;
             int currentItems = lvCurOrder.Items.Count;
 
-            for (int i = 0; i < currentItems ; i++)
+            for (int i = 0; i < currentItems; ++i)
             {
                 if (lvCurOrder.Items[i].Selected)
                 {
-                    ++selectCount;
+                    ++selectedCount;
                 }
             }
 
-            int caseSwitch = selectCount;
+            int caseSwitch = selectedCount;
 
-            switch (selectCount)
+            switch (selectedCount)
             {
                 case 0:
                     MessageBox.Show("Must select an entry to edit.");
@@ -537,19 +537,19 @@ namespace Filtrea
             this.Close();
         }
 
-        //Allows users to select input files for cost and customers
+        //TODO: I'm not dynamically allocating for one of these windows if one already exists
+        //should allow users to select input files for client, frames, and components
         private void inputFilePathsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             inputPreferenceForm popup = new inputPreferenceForm();
             popup.Show();
         }
 
-        //Allows users to select output files for ledger
+        //should allow users to select output file for custom orders ledger
         private void outputFilePathsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             outputPreferenceForm popup = new outputPreferenceForm();
             popup.Show();
         }
-
     }
 }
