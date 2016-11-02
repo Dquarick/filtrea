@@ -1,0 +1,44 @@
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.exe.config
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.exe
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.pdb
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.csprojResolveAssemblyReference.cache
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.formMain.resources
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.Properties.Resources.resources
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.GenerateResource.Cache
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.exe
+c:\users\dave quarick\documents\visual studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.pdb
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.exe.config
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.exe
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.pdb
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.exe
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.pdb
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.csprojResolveAssemblyReference.cache
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.formMain.resources
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.Properties.Resources.resources
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.GenerateResource.Cache
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Excel.dll
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Excel.xml
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.inputPreferenceForm.resources
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.outputPreferenceForm.resources
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.EditEntry.resources
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.exe.manifest
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\bin\Debug\Filtrea.application
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.exe.manifest
+C:\Users\Dave\Documents\Visual Studio 2015\Projects\Filtrea\Filtrea\obj\Debug\Filtrea.application
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Filtrea.exe.config
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.exe
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Filtrea.exe.manifest
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Filtrea.application
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Filtrea.exe
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Filtrea.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\Excel.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csprojResolveAssemblyReference.cache
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.EditEntry.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.formMain.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.inputPreferenceForm.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.outputPreferenceForm.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.Properties.Resources.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.GenerateResource.Cache
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.exe.manifest
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.application
