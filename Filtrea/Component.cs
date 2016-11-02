@@ -15,7 +15,7 @@ namespace Filtrea
         {
             cost = _cost;
         }
-        public void setPart(string _part)
+        public void setName(string _part)
         {
             part = _part;
         }
@@ -25,7 +25,7 @@ namespace Filtrea
             return cost;
         }
 
-        public string getPart()
+        public string getName()
         {
             return part;
         }

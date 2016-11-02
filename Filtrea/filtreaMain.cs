@@ -39,7 +39,7 @@ namespace Filtrea
                     {
                         Component productPart = new Component();
 
-                        productPart.setPart(row.Cells[0].Text);
+                        productPart.setName(row.Cells[0].Text);
                         productPart.setCost(double.Parse(row.Cells[1].Text));
                         hardware.Add(productPart);
                     }
@@ -67,7 +67,7 @@ namespace Filtrea
 
                         //adding the object to a list of all possible frame types
                         productPart.setCost(double.Parse(row.Cells[1].Text));
-                        productPart.setPart(row.Cells[0].Text);
+                        productPart.setName(row.Cells[0].Text);
                         frames.Add(productPart);
                     }
                 }
@@ -104,7 +104,6 @@ namespace Filtrea
         }
 
         /*INPUT VALIDATION*/
-
         //product quantity
         private bool validProductQuantity()
         {
@@ -237,8 +236,9 @@ namespace Filtrea
 
             //specifications to entry
             CheckBox[] components = { cbAlum, cbCarb, cbLens, cbPT, cbTS, cbMB, cbGrom };
+            int MATERIALS_COUNT = components.Length;
 
-            for (int i = 0; i < 7; ++i)
+            for (int i = 0; i < MATERIALS_COUNT ; ++i)
             {
 
                 if (components[i].Checked)
@@ -299,7 +299,7 @@ namespace Filtrea
 
             for (int i = 0; i < componentList.Count; ++i)
             {
-                if (componentList[i].getPart() == name)
+                if (componentList[i].getName() == name)
                 {
                     cost += componentList[i].getCost();
                 }
