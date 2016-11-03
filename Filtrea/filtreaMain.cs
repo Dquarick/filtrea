@@ -66,8 +66,8 @@ namespace Filtrea
                         Component productPart = new Component();
 
                         //adding the object to a list of all possible frame types
-                        productPart.setCost(double.Parse(row.Cells[1].Text));
                         productPart.setName(row.Cells[0].Text);
+                        productPart.setCost(double.Parse(row.Cells[1].Text));
                         frames.Add(productPart);
                     }
                 }
@@ -282,15 +282,15 @@ namespace Filtrea
         //REFACTOR ME! Could create a child class that inherits from Panel... 
         //hiding fields for hardware that isn't used
         private void clearHardware (ref Panel pan, ref TextBox qty, ref RadioButton pos1, 
-            ref RadioButton pos2, ref CheckBox side1, ref CheckBox side2) {
-
+            ref RadioButton pos2, ref CheckBox side1, ref CheckBox side2)
+        {
             pan.Hide();
             qty.Text = "";
             pos1.Checked = false;
             pos2.Checked = false;
             side1.Checked = false;
             side2.Checked = false;
-            }
+        }
 
         //passed comprehensive list of components, string naming a selected component, get component's price
         private double getCost(List<Component> componentList, string name)
@@ -311,10 +311,7 @@ namespace Filtrea
         //returns surface area of product media
         private double getArea()
         {
-            double surfaceArea = 0;
-
-            surfaceArea = double.Parse(txtWidth.Text) * double.Parse(txtHeight.Text);
-            return surfaceArea;
+              return double.Parse(txtWidth.Text) * double.Parse(txtHeight.Text);
         }
 
         //returns total linear feet of product frame 
@@ -330,9 +327,10 @@ namespace Filtrea
 
             //components that a user can select
             CheckBox[] componentSelection = { cbAlum, cbCarb, cbLens, cbPT, cbTS, cbMB, cbGrom };
+            int NUM_COMPONENTS = componentSelection.Length;
 
-                    //based on what's checked iterate the part list and read price, calculate cost * qty
-                    for (int i = 0; i < componentSelection.Length; ++i)
+            //based on what's checked iterate the part list and read price, calculate cost * qty
+            for (int i = 0; i < NUM_COMPONENTS ; ++i)
                     {
 
                         if (componentSelection[i].Checked)
@@ -381,7 +379,7 @@ namespace Filtrea
             return total;
             }
 
-        /*FORM EVENT CODE*/ 
+        /*EVENT HANDLERS FOR FORM MAIN*/ 
         
         //adding product's specs, qty, and price to current order
         private void btnAdd2Order_Click(object sender, EventArgs e)
@@ -405,7 +403,7 @@ namespace Filtrea
         }
 
         //TODO: Add functionality to the pop-up interface
-        //editing an entry
+        //start editing an entry
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int selectedCount = 0;
@@ -537,7 +535,6 @@ namespace Filtrea
             this.Close();
         }
 
-        //TODO: I'm not dynamically allocating for one of these windows if one already exists
         //should allow users to select input files for client, frames, and components
         private void inputFilePathsToolStripMenuItem_Click(object sender, EventArgs e)
         {
