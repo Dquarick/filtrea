@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E5EA80627D5214FD5D20DF53C2F7F5D21FB6D6AD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0341961617DFC0FDCA0B3449BAE065E28E76D0E0</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Filtrea_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Filtrea_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -90,9 +90,6 @@
     <Compile Include="filtreaMain.Designer.cs">
       <DependentUpon>filtreaMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="HardwareCheckBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="inputPreferenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +125,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Filtrea_1_TemporaryKey.pfx" />
     <None Include="Filtrea_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

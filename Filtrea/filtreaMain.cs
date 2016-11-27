@@ -51,7 +51,7 @@ namespace Filtrea
         private void iniFrameList(ref List <Component> frames)
         {
 
-            //Populates a list of all possible frame types
+            //populates dropdown with types of filter frames
             foreach (var worksheet in Workbook.Worksheets(@"C:\Users\Dave Quarick\Desktop\cs\Filtrea\frameList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
@@ -193,7 +193,7 @@ namespace Filtrea
             return valIn;
         }
 
-        //Input validation: ALL FIELDS 
+        //INPUT VALIDATION: ALL FIELDS 
         private bool inputCheck()
         {
             bool valIn = true;
@@ -232,7 +232,7 @@ namespace Filtrea
         void specs2Entry(ref string [] record)
         {
             //adding item dimensions to entry
-            record[0] += txtWidth.Text + " X " + txtHeight.Text;
+            record[0] += cboxChannel.Text + " Frame: " + txtWidth.Text + " X " + txtHeight.Text;
 
             //specifications to entry
             CheckBox[] components = { cbAlum, cbCarb, cbLens, cbPT, cbTS, cbMB, cbGrom };
@@ -293,87 +293,86 @@ namespace Filtrea
         }
 
         //passed comprehensive list of components, string naming a selected component, get component's price
-        private double getCost(List<Component> componentList, string name)
+        private double calcCost(List<Component> componentList, string name)
         {
             double cost = 0;
+            int NUM_COMPONENTS = componentList.Count;
 
-            for (int i = 0; i < componentList.Count; ++i)
+            for (int i = 0; i < NUM_COMPONENTS; ++i)
             {
                 if (componentList[i].getName() == name)
                 {
                     cost += componentList[i].getCost();
                 }
             }
- 
             return cost;
         }
 
-        //returns surface area of product media
-        private double getArea()
+        //returns surface area of product media in inches
+        private double calcArea()
         {
               return double.Parse(txtWidth.Text) * double.Parse(txtHeight.Text);
         }
 
-        //returns total linear feet of product frame 
-        private double getPerimeter()
+        //returns total length of product frame in inches
+        private double calcPerimeter()
         {
-            double perimeter = (double.Parse(txtHeight.Text) + double.Parse(txtWidth.Text)) * 2;
-            return perimeter;
+            return (double.Parse(txtHeight.Text) + double.Parse(txtWidth.Text)) * 2;
         }
 
-        private double calcPrice()
+        private double calcFilterPrice()
         {
             double total = 0;
+            const int INCHES_TO_FEET = 12;
 
             //components that a user can select
             CheckBox[] componentSelection = { cbAlum, cbCarb, cbLens, cbPT, cbTS, cbMB, cbGrom };
             int NUM_COMPONENTS = componentSelection.Length;
 
-            //based on what's checked iterate the part list and read price, calculate cost * qty
+            //based on what's checked, iterate the part list, read costs, and calculate cost * qty
             for (int i = 0; i < NUM_COMPONENTS ; ++i)
                     {
-
                         if (componentSelection[i].Checked)
                         {
-
                             string caseSwitch = componentSelection[i].Text;
 
                             switch (caseSwitch)
                             {
                                 case "Aluminium":
-                                total += getCost(mediaHardware, caseSwitch) * getArea();
+                                        total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
                                         break; 
 
                                 //TODO: Check if expanded aluminium is in the components .xlsx file
                                 case "Carbon":
-                                        total += getCost(mediaHardware, caseSwitch) * getArea();
-                                        total += getCost(mediaHardware, "Expanded Aluminium") * getArea();
+                                        total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
+                                        total += (calcCost(mediaHardware, "Expanded Aluminium") / INCHES_TO_FEET) * calcArea();
                                         break;
 
                                     case "Lens":
-                                        total += getCost(mediaHardware, caseSwitch) * getArea();
+                                        total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
                                         break;
 
                                     case "Pull Tab":
-                                        total += getCost(mediaHardware, caseSwitch) * double.Parse(txtPtQty.Text);
+                                        total += calcCost(mediaHardware, caseSwitch) * double.Parse(txtPtQty.Text);
                                         break;
 
                                     case "Tension Spring":
-                                        total += getCost(mediaHardware, caseSwitch) * double.Parse(txtTsQty.Text);
+                                        total += calcCost(mediaHardware, caseSwitch) * double.Parse(txtTsQty.Text);
                                         break;
 
                                     case "Mounting Bracket":
-                                        total += getCost(mediaHardware, caseSwitch) * double.Parse(txtMbQty.Text);
+                                        total += calcCost(mediaHardware, caseSwitch) * double.Parse(txtMbQty.Text);
                                         break;
 
                                     case "Grommet":
-                                        total += getCost(mediaHardware, caseSwitch) * double.Parse(txtGromQty.Text);
+                                        total += calcCost(mediaHardware, caseSwitch) * double.Parse(txtGromQty.Text);
                                         break;
                                 }
                         }
                 }
+            total += calcCost(frames, cboxChannel.Text) * calcPerimeter() / INCHES_TO_FEET;
 
-            //Considering the quantity of an item that's been ordered
+            //considering quantity of an item that's been ordered
             total *= double.Parse(txtQty.Text);
 
             return total;
@@ -391,10 +390,12 @@ namespace Filtrea
                 string[] record = { "", "", "" };
 
                 specs2Entry(ref record);
+
+                //item qty to entry
                 record[1] = txtQty.Text;
 
                 //adds item price to the entry
-                record[2] = "$ " + calcPrice().ToString();
+                record[2] = "$ " + calcFilterPrice().ToString();
 
                 //allocating for and adding new entry to listview 
                 ListViewItem lvi = new ListViewItem(record);
