@@ -18,7 +18,8 @@ namespace Filtrea
         //following three functions initialize containers by reading data in .xlsx files
         private void iniCustomerList()
         {
-            foreach (var worksheet in Workbook.Worksheets(@"C:\Users\Dave Quarick\Desktop\cs\Filtrea\clientList.xlsx"))
+            //@ represents the active directory during the program's runtime
+            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\clientList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
@@ -31,7 +32,7 @@ namespace Filtrea
         List<Component> mediaHardware = new List<Component>();
         private void iniMediaList(ref List<Component> hardware)
         {
-            foreach (var worksheet in Workbook.Worksheets(@"C:\Users\Dave Quarick\Desktop\cs\Filtrea\mediaList.xlsx"))
+            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\mediaList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
@@ -52,7 +53,7 @@ namespace Filtrea
         {
 
             //populates dropdown with types of filter frames
-            foreach (var worksheet in Workbook.Worksheets(@"C:\Users\Dave Quarick\Desktop\cs\Filtrea\frameList.xlsx"))
+            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\frameList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
@@ -72,6 +73,16 @@ namespace Filtrea
                     }
                 }
             }
+        }
+
+        double[] margins = { .3, .35, .4, .45, .5, .55, .6, .65, .7, .75, .85, .9, .95 };
+        private void iniMargin()
+        {
+            foreach (int element in margins)
+            {
+                cboxMargins.Items.Add(element);
+            }
+            
         }
 
         //clearing previous item's specs for a new custom order
@@ -456,12 +467,10 @@ namespace Filtrea
             }
         }
 
-
-        /* should print material prep instructions, fab diagram, package label, 
-        shipping label, invoice, enters transaction into ledger*/
+        //prints list view
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            new PrintDialog();  
         }
 
         //clears form for an order by a new client

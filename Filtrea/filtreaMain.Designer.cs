@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,12 +93,16 @@
             this.rbGromOther = new System.Windows.Forms.RadioButton();
             this.rbGromCen = new System.Windows.Forms.RadioButton();
             this.txtGromQty = new System.Windows.Forms.TextBox();
+            this.cboxMargins = new System.Windows.Forms.ComboBox();
+            this.lblMargin = new System.Windows.Forms.Label();
+            this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panTs.SuspendLayout();
             this.panHardLbl.SuspendLayout();
             this.panPt.SuspendLayout();
             this.panMb.SuspendLayout();
             this.panGrom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formMainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -706,12 +711,36 @@
             this.txtGromQty.Size = new System.Drawing.Size(51, 20);
             this.txtGromQty.TabIndex = 0;
             // 
+            // cboxMargins
+            // 
+            this.cboxMargins.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMargins.FormattingEnabled = true;
+            this.cboxMargins.Location = new System.Drawing.Point(180, 56);
+            this.cboxMargins.Name = "cboxMargins";
+            this.cboxMargins.Size = new System.Drawing.Size(133, 21);
+            this.cboxMargins.TabIndex = 57;
+            // 
+            // lblMargin
+            // 
+            this.lblMargin.AutoSize = true;
+            this.lblMargin.Location = new System.Drawing.Point(177, 40);
+            this.lblMargin.Name = "lblMargin";
+            this.lblMargin.Size = new System.Drawing.Size(39, 13);
+            this.lblMargin.TabIndex = 58;
+            this.lblMargin.Text = "Margin";
+            // 
+            // formMainBindingSource
+            // 
+            this.formMainBindingSource.DataSource = typeof(Filtrea.formMain);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(592, 664);
+            this.Controls.Add(this.lblMargin);
+            this.Controls.Add(this.cboxMargins);
             this.Controls.Add(this.panGrom);
             this.Controls.Add(this.panMb);
             this.Controls.Add(this.panPt);
@@ -746,6 +775,8 @@
             this.Controls.Add(this.lblChannel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(608, 703);
+            this.MinimumSize = new System.Drawing.Size(608, 703);
             this.Name = "formMain";
             this.Text = "Filtrea 1.0 Beta";
             this.Load += new System.EventHandler(this.formMain_Load);
@@ -761,6 +792,7 @@
             this.panMb.PerformLayout();
             this.panGrom.ResumeLayout(false);
             this.panGrom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formMainBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,6 +863,9 @@
         private System.Windows.Forms.RadioButton rbGromOther;
         private System.Windows.Forms.RadioButton rbGromCen;
         private System.Windows.Forms.TextBox txtGromQty;
+        private System.Windows.Forms.ComboBox cboxMargins;
+        private System.Windows.Forms.Label lblMargin;
+        private System.Windows.Forms.BindingSource formMainBindingSource;
     }
 }
 
