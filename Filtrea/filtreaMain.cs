@@ -16,7 +16,7 @@ namespace Filtrea
         /*FUNCTIONS RUNNING AT PROCESS START*/
         
         //following three functions initialize containers by reading data in .xlsx files
-        private void iniCustomerList()
+        private void iniClientList()
         {
             //@ represents the active directory during the program's runtime
             foreach (var worksheet in Workbook.Worksheets(@"..\..\..\clientList.xlsx"))
@@ -75,14 +75,17 @@ namespace Filtrea
             }
         }
 
-        double[] margins = { .3, .35, .4, .45, .5, .55, .6, .65, .7, .75, .85, .9, .95 };
-        private void iniMargin()
+        private void iniMarkupFactor()
         {
-            foreach (int element in margins)
+
+            double[] markupFactors = { 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3 };
+            int NUM_FACTORS = markupFactors.Length;
+
+            //maybe change this to a foreach?
+            for (int i = 0; i < NUM_FACTORS; ++i)
             {
-                cboxMargins.Items.Add(element);
+                cboxMarkup.Items.Add(markupFactors[i]);
             }
-            
         }
 
         //clearing previous item's specs for a new custom order
@@ -108,9 +111,10 @@ namespace Filtrea
         /*STARTING THE PROCESS*/
         private void formMain_Load(object sender, EventArgs e)
         {
-            iniCustomerList();
+            iniClientList();
             iniMediaList(ref mediaHardware);
             iniFrameList(ref frames);
+            iniMarkupFactor();
             clearFields();
         }
 
@@ -331,7 +335,7 @@ namespace Filtrea
             return (double.Parse(txtHeight.Text) + double.Parse(txtWidth.Text)) * 2;
         }
 
-        private double calcFilterPrice()
+        private string calcFilterPrice()
         {
             double total = 0;
             const int INCHES_TO_FEET = 12;
@@ -386,7 +390,12 @@ namespace Filtrea
             //considering quantity of an item that's been ordered
             total *= double.Parse(txtQty.Text);
 
-            return total;
+            //multiplying cost by markup factor to determine price
+            total *= double.Parse(cboxMarkup.Text);
+
+            total = Math.Round(total, 2);
+
+            return total.ToString("0.00");
             }
 
         /*EVENT HANDLERS FOR FORM MAIN*/ 
@@ -479,6 +488,7 @@ namespace Filtrea
             lvCurOrder.Items.Clear();
             clearFields();
             cboxCustomer.Text = null;
+            cboxMarkup.Text = null;
         }
         
         //show or hide component fields - refactor this shit

@@ -93,8 +93,8 @@
             this.rbGromOther = new System.Windows.Forms.RadioButton();
             this.rbGromCen = new System.Windows.Forms.RadioButton();
             this.txtGromQty = new System.Windows.Forms.TextBox();
-            this.cboxMargins = new System.Windows.Forms.ComboBox();
-            this.lblMargin = new System.Windows.Forms.Label();
+            this.cboxMarkup = new System.Windows.Forms.ComboBox();
+            this.lblMarkup = new System.Windows.Forms.Label();
             this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panTs.SuspendLayout();
@@ -711,23 +711,23 @@
             this.txtGromQty.Size = new System.Drawing.Size(51, 20);
             this.txtGromQty.TabIndex = 0;
             // 
-            // cboxMargins
+            // cboxMarkup
             // 
-            this.cboxMargins.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxMargins.FormattingEnabled = true;
-            this.cboxMargins.Location = new System.Drawing.Point(180, 56);
-            this.cboxMargins.Name = "cboxMargins";
-            this.cboxMargins.Size = new System.Drawing.Size(133, 21);
-            this.cboxMargins.TabIndex = 57;
+            this.cboxMarkup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMarkup.FormattingEnabled = true;
+            this.cboxMarkup.Location = new System.Drawing.Point(180, 56);
+            this.cboxMarkup.Name = "cboxMarkup";
+            this.cboxMarkup.Size = new System.Drawing.Size(133, 21);
+            this.cboxMarkup.TabIndex = 57;
             // 
-            // lblMargin
+            // lblMarkup
             // 
-            this.lblMargin.AutoSize = true;
-            this.lblMargin.Location = new System.Drawing.Point(177, 40);
-            this.lblMargin.Name = "lblMargin";
-            this.lblMargin.Size = new System.Drawing.Size(39, 13);
-            this.lblMargin.TabIndex = 58;
-            this.lblMargin.Text = "Margin";
+            this.lblMarkup.AutoSize = true;
+            this.lblMarkup.Location = new System.Drawing.Point(177, 40);
+            this.lblMarkup.Name = "lblMarkup";
+            this.lblMarkup.Size = new System.Drawing.Size(135, 13);
+            this.lblMarkup.TabIndex = 58;
+            this.lblMarkup.Text = "Price Factor (Cost x Factor)";
             // 
             // formMainBindingSource
             // 
@@ -739,8 +739,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(592, 664);
-            this.Controls.Add(this.lblMargin);
-            this.Controls.Add(this.cboxMargins);
+            this.Controls.Add(this.lblMarkup);
+            this.Controls.Add(this.cboxMarkup);
             this.Controls.Add(this.panGrom);
             this.Controls.Add(this.panMb);
             this.Controls.Add(this.panPt);
@@ -863,8 +863,8 @@
         private System.Windows.Forms.RadioButton rbGromOther;
         private System.Windows.Forms.RadioButton rbGromCen;
         private System.Windows.Forms.TextBox txtGromQty;
-        private System.Windows.Forms.ComboBox cboxMargins;
-        private System.Windows.Forms.Label lblMargin;
+        private System.Windows.Forms.ComboBox cboxMarkup;
+        private System.Windows.Forms.Label lblMarkup;
         private System.Windows.Forms.BindingSource formMainBindingSource;
     }
 }
