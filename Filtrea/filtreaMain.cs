@@ -208,13 +208,26 @@ namespace Filtrea
             return valIn;
         }
 
+        private bool validMarkupFactor()
+        {
+            bool valIn = true;
+
+            if (cboxMarkup.Text == "")
+            {
+                MessageBox.Show("Must enter a Markup Factor.");
+                valIn = false;
+            }
+
+            return valIn;
+        }
+
         //INPUT VALIDATION: ALL FIELDS 
         private bool inputCheck()
         {
             bool valIn = true;
   
             if (!validProductQuantity() || !validMediaSelection() 
-                || !validProductDimension() || !validHardwareQuantity())
+                || !validProductDimension() || !validHardwareQuantity() || !validMarkupFactor())
             {
                 valIn = false;
             }
