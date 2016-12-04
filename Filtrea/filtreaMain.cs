@@ -1,5 +1,5 @@
-﻿using System; //access to the OS
-using System.Windows.Forms; //Windows controls and forms
+﻿using System;
+using System.Windows.Forms;
 using Excel; //reading .xslx files
 using System.Collections.Generic; //lists
 
@@ -476,10 +476,20 @@ namespace Filtrea
             }
         }
 
-        //prints list view
+        //prints list view using ObjectListView project
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            new PrintDialog();  
+            BrightIdeasSoftware.ListViewPrinter printer = new BrightIdeasSoftware.ListViewPrinter();
+            printer.AlwaysCenterListHeader = true;
+            printer.ListView = lvCurOrder;
+            printer.DocumentName = "Duraflow Industries Order" + "Client: " + cboxCustomer.Text;
+            printer.Header = "Duraflow Industries Order";
+            printer.DefaultPageSettings.Margins.Top = 5;
+            printer.DefaultPageSettings.Margins.Left = 5;
+            printer.DefaultPageSettings.Margins.Right = 5;
+            printer.IsListHeaderOnEachPage = true;
+            printer.Footer = "Duraflow Industries - " + DateTime.Now.ToString("dddd, dd.MMMM yyyy HH:mm");
+            printer.PrintPreview();
         }
 
         //clears form for an order by a new client

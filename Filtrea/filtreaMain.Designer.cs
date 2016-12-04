@@ -95,6 +95,7 @@
             this.txtGromQty = new System.Windows.Forms.TextBox();
             this.cboxMarkup = new System.Windows.Forms.ComboBox();
             this.lblMarkup = new System.Windows.Forms.Label();
+            this.listViewPrinter1 = new BrightIdeasSoftware.ListViewPrinter();
             this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panTs.SuspendLayout();
@@ -729,6 +730,31 @@
             this.lblMarkup.TabIndex = 58;
             this.lblMarkup.Text = "Price Factor (Cost x Factor)";
             // 
+            // listViewPrinter1
+            // 
+            // 
+            // 
+            // 
+            this.listViewPrinter1.CellFormat.CanWrap = true;
+            this.listViewPrinter1.CellFormat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            // 
+            // 
+            // 
+            this.listViewPrinter1.FooterFormat.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Italic);
+            // 
+            // 
+            // 
+            this.listViewPrinter1.GroupHeaderFormat.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            // 
+            // 
+            // 
+            this.listViewPrinter1.HeaderFormat.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // 
+            // 
+            this.listViewPrinter1.ListHeaderFormat.CanWrap = true;
+            this.listViewPrinter1.ListHeaderFormat.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // formMainBindingSource
             // 
             this.formMainBindingSource.DataSource = typeof(Filtrea.formMain);
@@ -866,6 +892,7 @@
         private System.Windows.Forms.ComboBox cboxMarkup;
         private System.Windows.Forms.Label lblMarkup;
         private System.Windows.Forms.BindingSource formMainBindingSource;
+        private BrightIdeasSoftware.ListViewPrinter listViewPrinter1;
     }
 }
 
