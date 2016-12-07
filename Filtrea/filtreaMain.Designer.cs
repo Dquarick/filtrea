@@ -32,9 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inputFilePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outputFilePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblChannel = new System.Windows.Forms.Label();
             this.lblMedia = new System.Windows.Forms.Label();
             this.cbAlum = new System.Windows.Forms.CheckBox();
@@ -110,8 +107,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.preferencesToolStripMenuItem});
+            this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(592, 24);
@@ -129,32 +125,9 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // preferencesToolStripMenuItem
-            // 
-            this.preferencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inputFilePathsToolStripMenuItem,
-            this.outputFilePathsToolStripMenuItem});
-            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.preferencesToolStripMenuItem.Text = "Preferences";
-            // 
-            // inputFilePathsToolStripMenuItem
-            // 
-            this.inputFilePathsToolStripMenuItem.Name = "inputFilePathsToolStripMenuItem";
-            this.inputFilePathsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.inputFilePathsToolStripMenuItem.Text = "Input File Paths";
-            this.inputFilePathsToolStripMenuItem.Click += new System.EventHandler(this.inputFilePathsToolStripMenuItem_Click);
-            // 
-            // outputFilePathsToolStripMenuItem
-            // 
-            this.outputFilePathsToolStripMenuItem.Name = "outputFilePathsToolStripMenuItem";
-            this.outputFilePathsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.outputFilePathsToolStripMenuItem.Text = "Output File Paths";
-            this.outputFilePathsToolStripMenuItem.Click += new System.EventHandler(this.outputFilePathsToolStripMenuItem_Click);
             // 
             // lblChannel
             // 
@@ -827,7 +800,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.Label lblChannel;
         private System.Windows.Forms.Label lblMedia;
         private System.Windows.Forms.CheckBox cbAlum;
@@ -859,8 +831,6 @@
         private System.Windows.Forms.Button btnClearFields;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblHwQty;
-        private System.Windows.Forms.ToolStripMenuItem inputFilePathsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outputFilePathsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblSideSelection;

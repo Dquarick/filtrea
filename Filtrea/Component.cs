@@ -8,26 +8,20 @@ namespace Filtrea
 {
     class Component
     {
-        double cost = 0;
-        string part = "";
+        double _cost = 0;
+        string _name = "";
 
-        public void setCost(double _cost)
+        public double Cost
         {
-            cost = _cost;
-        }
-        public void setName(string _part)
-        {
-            part = _part;
+            get { return _cost;}
+            set { _cost = value;}
         }
 
-        public double getCost()
+        public string Name
         {
-            return cost;
+            get { return _name; }
+            set { _name = value; }
         }
 
-        public string getName()
-        {
-            return part;
-        }
     }
 }

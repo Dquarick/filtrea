@@ -40,8 +40,8 @@ namespace Filtrea
                     {
                         Component productPart = new Component();
 
-                        productPart.setName(row.Cells[0].Text);
-                        productPart.setCost(double.Parse(row.Cells[1].Text));
+                        productPart.Name = row.Cells[0].Text;
+                        productPart.Cost = double.Parse(row.Cells[1].Text);
                         hardware.Add(productPart);
                     }
                 }
@@ -67,8 +67,8 @@ namespace Filtrea
                         Component productPart = new Component();
 
                         //adding the object to a list of all possible frame types
-                        productPart.setName(row.Cells[0].Text);
-                        productPart.setCost(double.Parse(row.Cells[1].Text));
+                        productPart.Name = row.Cells[0].Text;
+                        productPart.Cost = double.Parse(row.Cells[1].Text);
                         frames.Add(productPart);
                     }
                 }
@@ -148,8 +148,6 @@ namespace Filtrea
             return valIn;
         }
 
-        //TODO: didn't test for negative input ... Come on me... 
-        //product dimensions
         private bool validProductDimension()
         {
             double dimension;
@@ -334,9 +332,9 @@ namespace Filtrea
 
             for (int i = 0; i < NUM_COMPONENTS; ++i)
             {
-                if (componentList[i].getName() == name)
+                if (componentList[i].Name == name)
                 {
-                    cost += componentList[i].getCost();
+                    cost += componentList[i].Cost;
                 }
             }
             return cost;
@@ -584,7 +582,7 @@ namespace Filtrea
             this.Close();
         }
 
-        //should allow users to select input files for client, frames, and components
+        /*should allow users to select input files for client, frames, and components
         private void inputFilePathsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             inputPreferenceForm popup = new inputPreferenceForm();
@@ -597,5 +595,6 @@ namespace Filtrea
             outputPreferenceForm popup = new outputPreferenceForm();
             popup.Show();
         }
+        */
     }
 }
