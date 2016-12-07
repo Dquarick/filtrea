@@ -161,6 +161,12 @@ namespace Filtrea
                 MessageBox.Show("Must input valid product dimensions.");
                 valIn = false; 
             }
+
+            if(dimension <= 0) {
+                MessageBox.Show("Must input positive dimensions.");
+                valIn = false;
+            }
+
             return valIn; 
         }
 
