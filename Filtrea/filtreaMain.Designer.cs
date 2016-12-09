@@ -125,7 +125,7 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -336,12 +336,12 @@
             // colSpecifications
             // 
             this.colSpecifications.Text = "Specifications";
-            this.colSpecifications.Width = 446;
+            this.colSpecifications.Width = 412;
             // 
             // colQty
             // 
             this.colQty.Text = "Quantity";
-            this.colQty.Width = 55;
+            this.colQty.Width = 89;
             // 
             // colPrice
             // 
