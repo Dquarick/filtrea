@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Filtrea.exe.manifest" size="6790">
+    <dependentAssembly dependencyType="install" codebase="Filtrea.exe.manifest" size="6788">
       <assemblyIdentity name="Filtrea.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CUZUVRAcdyDTY2nwpxxIR5P/upRVuFzDdSDB/NA/vy8=</dsig:DigestValue>
+        <dsig:DigestValue>TT8t/1ydsVP4yFz6SjfTMqfSAmqh2IQmCw+1ktbZazM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

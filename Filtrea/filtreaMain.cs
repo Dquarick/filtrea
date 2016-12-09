@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.IO;
 using Excel; //reading .xslx files
 using System.Collections.Generic; //lists
 
@@ -15,26 +14,12 @@ namespace Filtrea
         }
 
         /*FUNCTIONS RUNNING AT PROCESS START*/
-
-        private bool inputFileExists(string fileName)
-        {
-            if (!File.Exists(@"..\..\..\" + fileName))
-            {
-                var workbook = new ClosedXML.Excel.XLWorkbook();
-                var worksheet = workbook.Worksheets.Add(fileName);
-                workbook.SaveAs(@"..\..\..\" + fileName);
-                return false;
-            }
-            return true;
-        }
         
         //following three functions initialize containers by reading data in .xlsx files
         private void iniClientList()
         {
-            inputFileExists("clientList.xlsx");
-
             //@ represents the active directory during the program's runtime
-            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\clientList.xlsx"))
+            foreach (var worksheet in Workbook.Worksheets(@"clientList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
@@ -47,7 +32,7 @@ namespace Filtrea
         List<Component> mediaHardware = new List<Component>();
         private void iniMediaList(ref List<Component> hardware)
         {
-            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\mediaList.xlsx"))
+            foreach (var worksheet in Workbook.Worksheets(@"mediaList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
@@ -68,7 +53,7 @@ namespace Filtrea
         {
 
             //populates dropdown with types of filter frames
-            foreach (var worksheet in Workbook.Worksheets(@"..\..\..\frameList.xlsx"))
+            foreach (var worksheet in Workbook.Worksheets(@"frameList.xlsx"))
             {
                 foreach (var row in worksheet.Rows)
                 {
