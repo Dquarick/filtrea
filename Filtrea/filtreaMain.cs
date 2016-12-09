@@ -500,7 +500,7 @@ namespace Filtrea
             printer.AlwaysCenterListHeader = true;
             printer.ListView = lvCurOrder;
             printer.DocumentName = "Duraflow Industries Order" + "Client: " + cboxCustomer.Text;
-            printer.Header = "Duraflow Industries Order";
+            printer.Header = "Duraflow Industries Order" + " | Client: " + cboxCustomer.Text;
             printer.DefaultPageSettings.Margins.Top = 5;
             printer.DefaultPageSettings.Margins.Left = 5;
             printer.DefaultPageSettings.Margins.Right = 5;
