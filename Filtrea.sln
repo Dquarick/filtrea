@@ -16,23 +16,35 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
 		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A6674D84-7209-420B-B585-CF39184B5A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6674D84-7209-420B-B585-CF39184B5A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6674D84-7209-420B-B585-CF39184B5A9D}.Debug|Default.ActiveCfg = Debug|Any CPU
 		{A6674D84-7209-420B-B585-CF39184B5A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6674D84-7209-420B-B585-CF39184B5A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6674D84-7209-420B-B585-CF39184B5A9D}.Release|Default.ActiveCfg = Release|Any CPU
 		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Debug|Default.ActiveCfg = Debug|Any CPU
 		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73A10BD-2B5A-4BAC-897F-3A58CFC07631}.Release|Default.ActiveCfg = Release|Any CPU
 		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|Default.ActiveCfg = Debug|Any CPU
 		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|Default.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal
