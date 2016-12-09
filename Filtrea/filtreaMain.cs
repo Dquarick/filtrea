@@ -111,6 +111,7 @@ namespace Filtrea
         /*STARTING THE PROCESS*/
         private void formMain_Load(object sender, EventArgs e)
         {
+            panLens.Hide();
             iniClientList();
             iniMediaList(ref mediaHardware);
             iniFrameList(ref frames);
@@ -526,7 +527,7 @@ namespace Filtrea
                 showHardware(panHardLbl, panPt);
             }
 
-            if (!cbPT.Checked)
+            else
             {
                 clearHardware(ref panPt, ref txtPtQty, ref rbPtCen, 
                               ref rbPtOther, ref cbPtSs, ref cbPtLs);
@@ -540,7 +541,7 @@ namespace Filtrea
                 showHardware(panHardLbl, panTs);
             }
 
-            if (!cbTS.Checked)
+            else
             {
                 clearHardware(ref panTs, ref txtTsQty, ref rbTsCen,
                                  ref rbTsOther, ref cbTsSs, ref cbTsLs);
@@ -554,7 +555,7 @@ namespace Filtrea
                 showHardware(panHardLbl, panMb);
             }
 
-            if (!cbMB.Checked)
+            else
             {
                 clearHardware(ref panMb, ref txtMbQty, ref rbMbCen,
                                  ref rbMbOther, ref cbMbSs, ref cbMbLs);
@@ -568,7 +569,7 @@ namespace Filtrea
                 showHardware(panHardLbl, panGrom);
             }
 
-            if (!cbGrom.Checked)
+            else
             {
                 clearHardware(ref panGrom, ref txtGromQty, ref rbGromCen,
                                  ref rbGromOther, ref cbGromSs, ref cbGromLs);
@@ -579,7 +580,14 @@ namespace Filtrea
         {
             if (cbLens.Checked)
             {
+                panLens.Show();
+            }
 
+            else
+            {
+                panLens.Hide();
+                txtLensDim1.Text = "";
+                txtLensDim2.Text = "";
             }
         }
 
