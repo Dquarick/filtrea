@@ -575,12 +575,21 @@ namespace Filtrea
             }
         }
 
+                private void cbLens_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbLens.Checked)
+            {
+
+            }
+        }
+
         /* MENU EVENTS */
         //exiting from the "File" menu item
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
 
         /*should allow users to select input files for client, frames, and components
         private void inputFilePathsToolStripMenuItem_Click(object sender, EventArgs e)

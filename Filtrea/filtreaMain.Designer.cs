@@ -93,13 +93,19 @@
             this.cboxMarkup = new System.Windows.Forms.ComboBox();
             this.lblMarkup = new System.Windows.Forms.Label();
             this.listViewPrinter1 = new BrightIdeasSoftware.ListViewPrinter();
+            this.panLens = new System.Windows.Forms.Panel();
             this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblLensDim = new System.Windows.Forms.Label();
+            this.txtLensDim1 = new System.Windows.Forms.TextBox();
+            this.txtLensDim2 = new System.Windows.Forms.TextBox();
+            this.lblX2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panTs.SuspendLayout();
             this.panHardLbl.SuspendLayout();
             this.panPt.SuspendLayout();
             this.panMb.SuspendLayout();
             this.panGrom.SuspendLayout();
+            this.panLens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formMainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,9 +150,9 @@
             this.lblMedia.AutoSize = true;
             this.lblMedia.Location = new System.Drawing.Point(9, 91);
             this.lblMedia.Name = "lblMedia";
-            this.lblMedia.Size = new System.Drawing.Size(101, 13);
+            this.lblMedia.Size = new System.Drawing.Size(36, 13);
             this.lblMedia.TabIndex = 8;
-            this.lblMedia.Text = "Media / Dimensions";
+            this.lblMedia.Text = "Media";
             // 
             // cbAlum
             // 
@@ -177,6 +183,7 @@
             this.cbLens.TabIndex = 11;
             this.cbLens.Text = "Lens";
             this.cbLens.UseVisualStyleBackColor = true;
+            this.cbLens.CheckedChanged += new System.EventHandler(this.cbLens_CheckedChanged);
             // 
             // lblHardware
             // 
@@ -245,9 +252,9 @@
             this.lblItemDim.AutoSize = true;
             this.lblItemDim.Location = new System.Drawing.Point(177, 146);
             this.lblItemDim.Name = "lblItemDim";
-            this.lblItemDim.Size = new System.Drawing.Size(87, 13);
+            this.lblItemDim.Size = new System.Drawing.Size(89, 13);
             this.lblItemDim.TabIndex = 19;
-            this.lblItemDim.Text = "Item Dimensions:";
+            this.lblItemDim.Text = "Filter Dimensions:";
             // 
             // txtWidth
             // 
@@ -728,9 +735,52 @@
             this.listViewPrinter1.ListHeaderFormat.CanWrap = true;
             this.listViewPrinter1.ListHeaderFormat.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // panLens
+            // 
+            this.panLens.Controls.Add(this.lblX2);
+            this.panLens.Controls.Add(this.txtLensDim2);
+            this.panLens.Controls.Add(this.txtLensDim1);
+            this.panLens.Controls.Add(this.lblLensDim);
+            this.panLens.Location = new System.Drawing.Point(337, 146);
+            this.panLens.Name = "panLens";
+            this.panLens.Size = new System.Drawing.Size(200, 37);
+            this.panLens.TabIndex = 0;
+            // 
             // formMainBindingSource
             // 
             this.formMainBindingSource.DataSource = typeof(Filtrea.formMain);
+            // 
+            // lblLensDim
+            // 
+            this.lblLensDim.AutoSize = true;
+            this.lblLensDim.Location = new System.Drawing.Point(46, 1);
+            this.lblLensDim.Name = "lblLensDim";
+            this.lblLensDim.Size = new System.Drawing.Size(90, 13);
+            this.lblLensDim.TabIndex = 0;
+            this.lblLensDim.Text = "Lens Dimensions:";
+            // 
+            // txtLensDim1
+            // 
+            this.txtLensDim1.Location = new System.Drawing.Point(49, 17);
+            this.txtLensDim1.Name = "txtLensDim1";
+            this.txtLensDim1.Size = new System.Drawing.Size(51, 20);
+            this.txtLensDim1.TabIndex = 21;
+            // 
+            // txtLensDim2
+            // 
+            this.txtLensDim2.Location = new System.Drawing.Point(126, 17);
+            this.txtLensDim2.Name = "txtLensDim2";
+            this.txtLensDim2.Size = new System.Drawing.Size(51, 20);
+            this.txtLensDim2.TabIndex = 22;
+            // 
+            // lblX2
+            // 
+            this.lblX2.AutoSize = true;
+            this.lblX2.Location = new System.Drawing.Point(106, 20);
+            this.lblX2.Name = "lblX2";
+            this.lblX2.Size = new System.Drawing.Size(14, 13);
+            this.lblX2.TabIndex = 23;
+            this.lblX2.Text = "X";
             // 
             // formMain
             // 
@@ -738,6 +788,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(592, 664);
+            this.Controls.Add(this.panLens);
             this.Controls.Add(this.lblMarkup);
             this.Controls.Add(this.cboxMarkup);
             this.Controls.Add(this.panGrom);
@@ -791,6 +842,8 @@
             this.panMb.PerformLayout();
             this.panGrom.ResumeLayout(false);
             this.panGrom.PerformLayout();
+            this.panLens.ResumeLayout(false);
+            this.panLens.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formMainBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -863,6 +916,11 @@
         private System.Windows.Forms.Label lblMarkup;
         private System.Windows.Forms.BindingSource formMainBindingSource;
         private BrightIdeasSoftware.ListViewPrinter listViewPrinter1;
+        private System.Windows.Forms.Panel panLens;
+        private System.Windows.Forms.TextBox txtLensDim2;
+        private System.Windows.Forms.TextBox txtLensDim1;
+        private System.Windows.Forms.Label lblLensDim;
+        private System.Windows.Forms.Label lblX2;
     }
 }
 
