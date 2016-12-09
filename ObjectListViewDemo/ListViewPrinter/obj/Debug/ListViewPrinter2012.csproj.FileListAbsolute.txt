@@ -8,3 +8,5 @@ C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\obj\
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\obj\Debug\ListViewPrinter2012.csproj.GenerateResource.Cache
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\obj\Debug\ListViewPrinter.dll
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\obj\Debug\ListViewPrinter.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\bin\Debug\ListViewPrinter.dll.CodeAnalysisLog.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ListViewPrinter\bin\Debug\ListViewPrinter.dll.lastcodeanalysissucceeded

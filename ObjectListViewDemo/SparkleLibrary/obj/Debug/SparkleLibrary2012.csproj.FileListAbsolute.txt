@@ -1,0 +1,7 @@
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.dll.CodeAnalysisLog.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.dll.lastcodeanalysissucceeded
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\obj\Debug\SparkleLibrary2012.csprojResolveAssemblyReference.cache
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\obj\Debug\SparkleLibrary.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\SparkleLibrary\obj\Debug\SparkleLibrary.pdb

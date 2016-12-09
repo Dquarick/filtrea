@@ -41,9 +41,12 @@ C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.Genera
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.exe.manifest
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.application
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csprojResolveAssemblyReference.cache
-C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.Filtrea.exe.config
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ListViewPrinter.dll
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ObjectListView.dll
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ListViewPrinter.pdb
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ObjectListView.pdb
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ObjectListView.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ClosedXML.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ClosedXML.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ClosedXML.xml

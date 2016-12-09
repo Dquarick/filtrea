@@ -7,3 +7,5 @@ C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\obj\D
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\obj\Debug\ObjectListView2012.csproj.GenerateResource.Cache
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\obj\Debug\ObjectListView.dll
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\obj\Debug\ObjectListView.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\bin\Debug\ObjectListView.dll.CodeAnalysisLog.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\ObjectListView\bin\Debug\ObjectListView.dll.lastcodeanalysissucceeded

@@ -1,0 +1,14 @@
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\Tests.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\Tests.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\Tests.dll.CodeAnalysisLog.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\Tests.dll.lastcodeanalysissucceeded
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\nunit.framework.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\ObjectListView.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\ObjectListView.pdb
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\ObjectListView.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\bin\Debug\nunit.framework.xml
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\obj\Debug\Tests2012.csprojResolveAssemblyReference.cache
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\obj\Debug\BrightIdeasSoftware.Tests.MainForm.resources
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\obj\Debug\Tests2012.csproj.GenerateResource.Cache
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\obj\Debug\Tests.dll
+C:\Users\Dave Quarick\Desktop\cs\Filtrea\ObjectListViewDemo\Tests\obj\Debug\Tests.pdb
