@@ -14,7 +14,7 @@ namespace Filtrea
         }
 
         /*FUNCTIONS RUNNING AT PROCESS START*/
-        
+
         //following three functions initialize containers by reading data in .xlsx files
         private void iniClientList()
         {
@@ -49,7 +49,7 @@ namespace Filtrea
         }
 
         List<Component> frames = new List<Component>();
-        private void iniFrameList(ref List <Component> frames)
+        private void iniFrameList(ref List<Component> frames)
         {
 
             //populates dropdown with types of filter frames
@@ -91,17 +91,14 @@ namespace Filtrea
         //clearing previous item's specs for a new custom order
         private void clearFields()
         {
-            cbAlum.Checked = false;
-            cbCarb.Checked = false;
-            cbLens.Checked = false;
-            cbPT.Checked = false;
-            cbTS.Checked = false;
-            cbMB.Checked = false;
-            cbGrom.Checked = false;
-            txtWidth.Text = "";
-            txtHeight.Text = "";
-            txtQty.Text = "";
+            cbAlum.Checked = cbCarb.Checked = cbLens.Checked = cbPT.Checked =
+                cbTS.Checked = cbMB.Checked = cbGrom.Checked = false;
+
+            txtHeight.Text = txtWidth.Text = txtLensDim1.Text =
+                txtLensDim2.Text = txtQty.Text = "";
+
             cboxChannel.Text = null;
+
             panPt.Hide();
             panTs.Hide();
             panMb.Hide();
@@ -125,7 +122,7 @@ namespace Filtrea
         {
             bool valIn = true;
             int productQuantity = 0;
-    
+
             if (!int.TryParse(txtQty.Text, out productQuantity))
             {
                 MessageBox.Show("Must provide valid input for product quantity.");
@@ -154,19 +151,19 @@ namespace Filtrea
             double dimension;
             bool valIn = true;
 
-            if (!double.TryParse(txtWidth.Text, out dimension) || 
+            if (!double.TryParse(txtWidth.Text, out dimension) ||
                 !double.TryParse(txtHeight.Text, out dimension))
             {
                 MessageBox.Show("Must input valid product dimensions.");
-                valIn = false; 
+                valIn = false;
             }
 
-            if(dimension <= 0) {
+            if (dimension <= 0) {
                 MessageBox.Show("Must input positive dimensions.");
                 valIn = false;
             }
 
-            return valIn; 
+            return valIn;
         }
 
         //TODO: needs to adjust for new components added to .xslx file
@@ -176,13 +173,13 @@ namespace Filtrea
             bool valIn = true;
             int pieceCount = 0;
 
-            CheckBox[] hardware = {cbPT, cbTS, cbMB, cbGrom};
-            TextBox[] quantity = {txtPtQty, txtTsQty, txtMbQty, txtGromQty};
+            CheckBox[] hardware = { cbPT, cbTS, cbMB, cbGrom };
+            TextBox[] quantity = { txtPtQty, txtTsQty, txtMbQty, txtGromQty };
             const int HARDWARE_TYPES = 4;
 
-            for (int i = 0; i < HARDWARE_TYPES ; ++i)
+            for (int i = 0; i < HARDWARE_TYPES; ++i)
             {
-                if(hardware[i].Checked && !int.TryParse(quantity[i].Text, out pieceCount))
+                if (hardware[i].Checked && !int.TryParse(quantity[i].Text, out pieceCount))
                 {
                     string caseSwitch = hardware[i].Text;
 
@@ -215,29 +212,42 @@ namespace Filtrea
 
         private bool validMarkupFactor()
         {
-            bool valIn = true;
 
             if (cboxMarkup.Text == "")
             {
                 MessageBox.Show("Must enter a Markup Factor.");
-                valIn = false;
+                return false;
             }
 
-            return valIn;
+            return true;
+        }
+
+        private bool validLensDimensions()
+        {
+            if (cbLens.Checked)
+            {
+                if (double.Parse(txtLensDim1.Text) <= 0 || double.Parse(txtLensDim2.Text) <= 0)
+                {
+                    MessageBox.Show("Must enter positive lens dimensions.");
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         //INPUT VALIDATION: ALL FIELDS 
         private bool inputCheck()
         {
-            bool valIn = true;
-  
-            if (!validProductQuantity() || !validMediaSelection() 
-                || !validProductDimension() || !validHardwareQuantity() || !validMarkupFactor())
-            {
-                valIn = false;
-            }
 
-            return valIn;
+            if (!validProductQuantity() || !validMediaSelection()
+                || !validProductDimension() || !validHardwareQuantity()
+                || !validMarkupFactor() || !validLensDimensions())
+            {
+                return false;
+            }
+        
+            return true;
         }
 
         //showing fields for selected hardware components
@@ -265,7 +275,7 @@ namespace Filtrea
         void specs2Entry(ref string [] record)
         {
             //adding item dimensions to entry
-            record[0] += cboxChannel.Text + " Frame: " + txtWidth.Text + " X " + txtHeight.Text;
+            record[0] += cboxChannel.Text + " Frame: " + txtWidth.Text + "\" X " + txtHeight.Text + "\"";
 
             //specifications to entry
             CheckBox[] components = { cbAlum, cbCarb, cbLens, cbPT, cbTS, cbMB, cbGrom };
@@ -276,9 +286,9 @@ namespace Filtrea
 
                 if (components[i].Checked)
                 {
-                    string caseSwitch = components[i].Text;
+                    string componentName = components[i].Text;
 
-                    switch (caseSwitch)
+                    switch (componentName)
                     {
                         case "Aluminium":
                             record[0] += " " + components[i].Text;
@@ -290,6 +300,7 @@ namespace Filtrea
 
                         case "Lens":
                             record[0] += " " + components[i].Text;
+                            record[0] += " " + " - Lens: " + txtLensDim1.Text + "\" X " + txtLensDim2.Text + "\"";
                             break;
 
                         case "Pull Tab":
