@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Filtrea.exe" size="37896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Filtrea.exe" size="35336">
       <assemblyIdentity name="Filtrea" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gCaA8zHtiFchCa8Hb//mPypR0j3WDTSLwwin5mYxFyw=</dsig:DigestValue>
+        <dsig:DigestValue>sSatmw/v8zdtVbDebYJKfQe11sSTyh4Um9tD1KFtM2s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

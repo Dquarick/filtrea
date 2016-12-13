@@ -42,8 +42,6 @@ C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\bin\Debug\ObjectListView.xml
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csprojResolveAssemblyReference.cache
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.EditEntry.resources
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.formMain.resources
-C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.inputPreferenceForm.resources
-C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.outputPreferenceForm.resources
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.Properties.Resources.resources
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.csproj.GenerateResource.Cache
 C:\Users\Dave Quarick\Desktop\cs\Filtrea\Filtrea\obj\Debug\Filtrea.exe.manifest

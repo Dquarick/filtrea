@@ -52,7 +52,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.cboxCustomer = new System.Windows.Forms.ComboBox();
-            this.lvCurOrder = new System.Windows.Forms.ListView();
+            lvCurOrder = new System.Windows.Forms.ListView();
             this.colSpecifications = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colQty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -328,17 +328,17 @@
             // 
             // lvCurOrder
             // 
-            this.lvCurOrder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colSpecifications,
-            this.colQty,
-            this.colPrice});
-            this.lvCurOrder.GridLines = true;
-            this.lvCurOrder.Location = new System.Drawing.Point(12, 439);
-            this.lvCurOrder.Name = "lvCurOrder";
-            this.lvCurOrder.Size = new System.Drawing.Size(568, 184);
-            this.lvCurOrder.TabIndex = 28;
-            this.lvCurOrder.UseCompatibleStateImageBehavior = false;
-            this.lvCurOrder.View = System.Windows.Forms.View.Details;
+            lvCurOrder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            colSpecifications,
+            colQty,
+            colPrice});
+            lvCurOrder.GridLines = true;
+            lvCurOrder.Location = new System.Drawing.Point(12, 439);
+            lvCurOrder.Name = "lvCurOrder";
+            lvCurOrder.Size = new System.Drawing.Size(568, 184);
+            lvCurOrder.TabIndex = 28;
+            lvCurOrder.UseCompatibleStateImageBehavior = false;
+            lvCurOrder.View = System.Windows.Forms.View.Details;
             // 
             // colSpecifications
             // 
@@ -802,7 +802,7 @@
             this.Controls.Add(this.lblItemQty);
             this.Controls.Add(this.btnAdd2Order);
             this.Controls.Add(this.btnNewOrder);
-            this.Controls.Add(this.lvCurOrder);
+            this.Controls.Add(lvCurOrder);
             this.Controls.Add(this.cboxCustomer);
             this.Controls.Add(this.lblCustomer);
             this.Controls.Add(this.btnDelete);
@@ -873,7 +873,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.ComboBox cboxCustomer;
-        private System.Windows.Forms.ListView lvCurOrder;
+        public static System.Windows.Forms.ListView lvCurOrder;
         private System.Windows.Forms.ColumnHeader colSpecifications;
         private System.Windows.Forms.ColumnHeader colQty;
         private System.Windows.Forms.ColumnHeader colPrice;

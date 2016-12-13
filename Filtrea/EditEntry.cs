@@ -19,24 +19,18 @@ namespace Filtrea
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            /*for (int i = 0; i < lvCurOrder.Items.Count; ++i)
-            {
-                if (lvCurOrder.Items[i].Selected)
-                {
-                    lvCurOrder.Items[i].SubItems[0].Text = "EDITED";
-                    lvCurOrder.Items[i].SubItems[1].Text = "99";
-                    lvCurOrder.Items[i].SubItems[2].Text = "$69";
-                }
-                
-            }
-            */
+            if (txtQty.Text != "")
+                formMain.lvCurOrder.SelectedItems[0].SubItems[1].Text = txtQty.Text;
+            if (txtPrice.Text != "")
+                formMain.lvCurOrder.SelectedItems[0].SubItems[2].Text = "$ " + txtPrice.Text;
+            Close();
         }
 
         private void btnDiscard_Click(object sender, EventArgs e)
         {
             txtPrice.Text = "";
             txtQty.Text = "";
-            this.Close();
+            Close();
         }
     }
 }

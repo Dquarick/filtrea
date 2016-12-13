@@ -106,18 +106,6 @@
     <Compile Include="filtreaMain.Designer.cs">
       <DependentUpon>filtreaMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="inputPreferenceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="inputPreferenceForm.Designer.cs">
-      <DependentUpon>inputPreferenceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="outputPreferenceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="outputPreferenceForm.Designer.cs">
-      <DependentUpon>outputPreferenceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EditEntry.resx">
@@ -125,12 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="filtreaMain.resx">
       <DependentUpon>filtreaMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="inputPreferenceForm.resx">
-      <DependentUpon>inputPreferenceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="outputPreferenceForm.resx">
-      <DependentUpon>outputPreferenceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

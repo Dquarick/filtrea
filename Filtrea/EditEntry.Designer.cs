@@ -32,7 +32,7 @@
             this.btnDiscard = new System.Windows.Forms.Button();
             this.lblQty = new System.Windows.Forms.Label();
             this.txtQty = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -72,14 +72,14 @@
             this.txtQty.Size = new System.Drawing.Size(42, 20);
             this.txtQty.TabIndex = 3;
             // 
-            // label1
+            // lblPrice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Item Price:";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(12, 63);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(72, 13);
+            this.lblPrice.TabIndex = 4;
+            this.lblPrice.Text = "Item Price ($):";
             // 
             // txtPrice
             // 
@@ -94,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.lblQty);
             this.Controls.Add(this.btnDiscard);
@@ -112,7 +112,7 @@
         private System.Windows.Forms.Button btnDiscard;
         private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
     }
 }
