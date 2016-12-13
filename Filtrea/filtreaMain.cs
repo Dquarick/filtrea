@@ -105,7 +105,7 @@ namespace Filtrea
             panGrom.Hide();
         }
 
-        /*STARTING THE PROCESS*/
+        /*EXECUTED UPON PROCESS START*/
         private void formMain_Load(object sender, EventArgs e)
         {
             panLens.Hide();
@@ -117,60 +117,55 @@ namespace Filtrea
         }
 
         /*INPUT VALIDATION*/
-        //product quantity
         private bool validProductQuantity()
         {
-            bool valIn = true;
             int productQuantity = 0;
 
             if (!int.TryParse(txtQty.Text, out productQuantity))
             {
                 MessageBox.Show("Must provide valid input for product quantity.");
-                valIn = false;
+                return false;
             }
 
-            return valIn;
+            return true;
         }
 
-        //media selection
         private bool validMediaSelection()
         {
-            bool valIn = true;
 
             if (!cbAlum.Checked && !cbCarb.Checked && !cbLens.Checked)
             {
                 MessageBox.Show("Must select filter media.");
-                valIn = false;
+                return false;
             }
 
-            return valIn;
+            return true;
         }
 
         private bool validProductDimension()
         {
             double dimension;
-            bool valIn = true;
+            bool validInput = true;
 
             if (!double.TryParse(txtWidth.Text, out dimension) ||
                 !double.TryParse(txtHeight.Text, out dimension))
             {
                 MessageBox.Show("Must input valid product dimensions.");
-                valIn = false;
+                validInput = false;
             }
 
             if (dimension <= 0) {
                 MessageBox.Show("Must input positive dimensions.");
-                valIn = false;
+                validInput = false;
             }
 
-            return valIn;
+            return validInput;
         }
 
         //TODO: needs to adjust for new components added to .xslx file
-        //hardware quantities
         private bool validHardwareQuantity()
         {
-            bool valIn = true;
+            bool validQty = true;
             int pieceCount = 0;
 
             CheckBox[] hardware = { cbPT, cbTS, cbMB, cbGrom };
@@ -187,27 +182,27 @@ namespace Filtrea
                     {
                         case "Pull Tab":
                             MessageBox.Show("Enter valid input for PT quantity.");
-                            valIn = false;
+                            validQty = false;
                             break;
 
                         case "Tension Spring":
                             MessageBox.Show("Enter valid input for TS quantity.");
-                            valIn = false;
+                            validQty = false;
                             break;
 
                         case "Mounting Bracket":
                             MessageBox.Show("Enter valid input for MB quantity.");
-                            valIn = false;
+                            validQty = false;
                             break;
 
                         case "Grommet":
                             MessageBox.Show("Enter valid input for Grommet quantity.");
-                            valIn = false;
+                            validQty = false;
                             break;
                     }
                 }
             }
-            return valIn;
+            return validQty;
         }
 
         private bool validMarkupFactor()
@@ -235,8 +230,7 @@ namespace Filtrea
 
             return true;
         }
-
-        //INPUT VALIDATION: ALL FIELDS 
+ 
         private bool inputCheck()
         {
 
@@ -386,14 +380,14 @@ namespace Filtrea
                                         total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
                                         break; 
 
-                                //TODO: Check if expanded aluminium is in the components .xlsx file
                                 case "Carbon":
                                         total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
                                         total += (calcCost(mediaHardware, "Expanded Aluminium") / INCHES_TO_FEET) * calcArea();
                                         break;
 
                                     case "Lens":
-                                        total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * calcArea();
+                                        total += (calcCost(mediaHardware, caseSwitch) / INCHES_TO_FEET) * 
+                                            double.Parse(txtLensDim1.Text) * double.Parse(txtLensDim2.Text);
                                         break;
 
                                     case "Pull Tab":

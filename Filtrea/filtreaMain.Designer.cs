@@ -94,11 +94,11 @@
             this.lblMarkup = new System.Windows.Forms.Label();
             this.listViewPrinter1 = new BrightIdeasSoftware.ListViewPrinter();
             this.panLens = new System.Windows.Forms.Panel();
-            this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblLensDim = new System.Windows.Forms.Label();
-            this.txtLensDim1 = new System.Windows.Forms.TextBox();
-            this.txtLensDim2 = new System.Windows.Forms.TextBox();
             this.lblX2 = new System.Windows.Forms.Label();
+            this.txtLensDim2 = new System.Windows.Forms.TextBox();
+            this.txtLensDim1 = new System.Windows.Forms.TextBox();
+            this.lblLensDim = new System.Windows.Forms.Label();
+            this.formMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panTs.SuspendLayout();
             this.panHardLbl.SuspendLayout();
@@ -290,7 +290,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(14, 629);
+            this.btnPrint.Location = new System.Drawing.Point(414, 629);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 24;
@@ -300,7 +300,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(262, 629);
+            this.btnDelete.Location = new System.Drawing.Point(103, 629);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 25;
@@ -393,17 +393,17 @@
             // 
             // btnClearFields
             // 
-            this.btnClearFields.Location = new System.Drawing.Point(184, 379);
+            this.btnClearFields.Location = new System.Drawing.Point(103, 379);
             this.btnClearFields.Name = "btnClearFields";
             this.btnClearFields.Size = new System.Drawing.Size(75, 23);
             this.btnClearFields.TabIndex = 33;
-            this.btnClearFields.Text = "Clear Fields";
+            this.btnClearFields.Text = "New Item";
             this.btnClearFields.UseVisualStyleBackColor = true;
             this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(93, 379);
+            this.btnEdit.Location = new System.Drawing.Point(12, 629);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 23);
             this.btnEdit.TabIndex = 34;
@@ -746,9 +746,28 @@
             this.panLens.Size = new System.Drawing.Size(200, 37);
             this.panLens.TabIndex = 0;
             // 
-            // formMainBindingSource
+            // lblX2
             // 
-            this.formMainBindingSource.DataSource = typeof(Filtrea.formMain);
+            this.lblX2.AutoSize = true;
+            this.lblX2.Location = new System.Drawing.Point(106, 20);
+            this.lblX2.Name = "lblX2";
+            this.lblX2.Size = new System.Drawing.Size(14, 13);
+            this.lblX2.TabIndex = 23;
+            this.lblX2.Text = "X";
+            // 
+            // txtLensDim2
+            // 
+            this.txtLensDim2.Location = new System.Drawing.Point(126, 17);
+            this.txtLensDim2.Name = "txtLensDim2";
+            this.txtLensDim2.Size = new System.Drawing.Size(51, 20);
+            this.txtLensDim2.TabIndex = 22;
+            // 
+            // txtLensDim1
+            // 
+            this.txtLensDim1.Location = new System.Drawing.Point(49, 17);
+            this.txtLensDim1.Name = "txtLensDim1";
+            this.txtLensDim1.Size = new System.Drawing.Size(51, 20);
+            this.txtLensDim1.TabIndex = 21;
             // 
             // lblLensDim
             // 
@@ -759,28 +778,9 @@
             this.lblLensDim.TabIndex = 0;
             this.lblLensDim.Text = "Lens Dimensions:";
             // 
-            // txtLensDim1
+            // formMainBindingSource
             // 
-            this.txtLensDim1.Location = new System.Drawing.Point(49, 17);
-            this.txtLensDim1.Name = "txtLensDim1";
-            this.txtLensDim1.Size = new System.Drawing.Size(51, 20);
-            this.txtLensDim1.TabIndex = 21;
-            // 
-            // txtLensDim2
-            // 
-            this.txtLensDim2.Location = new System.Drawing.Point(126, 17);
-            this.txtLensDim2.Name = "txtLensDim2";
-            this.txtLensDim2.Size = new System.Drawing.Size(51, 20);
-            this.txtLensDim2.TabIndex = 22;
-            // 
-            // lblX2
-            // 
-            this.lblX2.AutoSize = true;
-            this.lblX2.Location = new System.Drawing.Point(106, 20);
-            this.lblX2.Name = "lblX2";
-            this.lblX2.Size = new System.Drawing.Size(14, 13);
-            this.lblX2.TabIndex = 23;
-            this.lblX2.Text = "X";
+            this.formMainBindingSource.DataSource = typeof(Filtrea.formMain);
             // 
             // formMain
             // 
